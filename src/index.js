@@ -33,12 +33,12 @@ module.exports = function toReadable (number) {
             else {
                 var ind = (number_arr[i] - '0');
                 if (ind > 0 ) {
-                    res_str = res_str + tens[ind];
+                    res_str = res_str + tens[ind] ;
                 }
                 i++ ;         
                 //console.log( number_arr[i + 1] );
                 if (number_arr[i] - '0' != 0) {
-                    res_str = res_str + ' ' + one_units[number_arr[i]];
+                    res_str = res_str +  ' ' + one_units[number_arr[i]];
                 }
             }
         }
@@ -47,5 +47,4 @@ module.exports = function toReadable (number) {
     return res_str;
 }
 
-
-//console.log( "##" + toReadable (12) +"##");
+//console.log( "##" + toReadable (777) +"##");
