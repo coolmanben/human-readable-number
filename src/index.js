@@ -29,21 +29,16 @@ module.exports = function toReadable (number) {
                 res_str = res_str + two_units[sum - 9]
                 return res_str ;
             }
-            // 20
-            else if (number_arr[i] - '0' == 2 && number_arr[i + 1] - '0' == 0) {
-                res_str = res_str + tens[2] ;
-                return res_str ;
-            }
-            // 21-99
+            // 20-99
             else {
                 var ind = (number_arr[i] - '0');
                 if (ind > 0 ) {
-                    res_str = res_str + tens[ind] + ' ';
+                    res_str = res_str + tens[ind];
                 }
                 i++ ;         
                 //console.log( number_arr[i + 1] );
                 if (number_arr[i] - '0' != 0) {
-                    res_str = res_str + one_units[number_arr[i]];
+                    res_str = res_str + ' ' + one_units[number_arr[i]];
                 }
             }
         }
@@ -53,4 +48,4 @@ module.exports = function toReadable (number) {
 }
 
 
-//console.log( "##" + toReadable (998) +"##");
+//console.log( "##" + toReadable (12) +"##");
