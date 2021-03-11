@@ -43,7 +43,7 @@ module.exports = function toReadable (number) {
                 i++ ;         
                 //console.log( number_arr[i + 1] );
                 if (number_arr[i] - '0' != 0) {
-                    res_str = res_str + one_units[number_arr[i]] + ' ';
+                    res_str = res_str + one_units[number_arr[i]];
                 }
             }
         }
@@ -51,3 +51,6 @@ module.exports = function toReadable (number) {
     }
     return res_str;
 }
+
+
+//console.log( "##" + toReadable (998) +"##");
