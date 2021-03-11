@@ -1,5 +1,4 @@
-//module.exports = 
-function toReadable (number) {
+module.exports = function toReadable (number) {
     var number_arr = number.toString().split('');
     var number_leng = number_arr.length;
     var res_str = '';
@@ -52,5 +51,3 @@ function toReadable (number) {
     }
     return res_str;
 }
-
-console.log(toReadable(999)) 
